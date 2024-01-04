@@ -52,7 +52,6 @@ public class Problema2 {
         Scanner entrada = new Scanner(System.in);
         double lado;
         double area;
-
         System.out.println("Ingresar el lado del cuadrado");
         lado = entrada.nextDouble();
         area = lado * lado * lado * lado;
@@ -60,8 +59,28 @@ public class Problema2 {
     }
 
     public static void obtenerAreaTriangulo() {
+        Scanner entrada = new Scanner(System.in);
+        double altura;
+        double base;
+        double area;
+        System.out.println("Ingresar la base del triangulo");
+        base = entrada.nextDouble();
+        System.out.println("Ingresar la altura del triangulo");
+        altura = entrada.nextDouble();
+        area = (base * altura) / 2;
+        System.out.printf("El area del triangulo es igual a %.2f/n", area);
     }
 
     public static void obtenerAreaRectangulo() {
+        Scanner entrada = new Scanner(System.in);
+        double altura;
+        double base;
+        double area;
+        System.out.println("Ingresar la base del rectangulo");
+        base = entrada.nextDouble();
+        System.out.println("Ingresar la altura del rectangulo");
+        altura = entrada.nextDouble();
+        area = base * altura;
+        System.out.printf("El area del rectangulo es igual a %.2f/n", area);
     }
 }
