@@ -55,7 +55,7 @@ public class Problema2 {
         System.out.println("Ingresar el lado del cuadrado");
         lado = entrada.nextDouble();
         area = lado * lado * lado * lado;
-        System.out.printf("El area del cuadrado es igual a %.2f/n", area);
+        System.out.printf("El area del cuadrado es igual a %.2f\n", area);
     }
 
     public static void obtenerAreaTriangulo() {
@@ -68,7 +68,7 @@ public class Problema2 {
         System.out.println("Ingresar la altura del triangulo");
         altura = entrada.nextDouble();
         area = (base * altura) / 2;
-        System.out.printf("El area del triangulo es igual a %.2f/n", area);
+        System.out.printf("El area del triangulo es igual a %.2f\n", area);
     }
 
     public static void obtenerAreaRectangulo() {
@@ -81,6 +81,6 @@ public class Problema2 {
         System.out.println("Ingresar la altura del rectangulo");
         altura = entrada.nextDouble();
         area = base * altura;
-        System.out.printf("El area del rectangulo es igual a %.2f/n", area);
+        System.out.printf("El area del rectangulo es igual a %.2f\n", area);
     }
 }
