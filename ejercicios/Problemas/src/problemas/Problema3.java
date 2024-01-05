@@ -21,16 +21,23 @@ public class Problema3 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        double[] notas = new double[4];
+        double[] n = new double[4];
         int opcion1;
+        String promedio;
         boolean bandera = true;
         while (bandera) {
-            for (int i = 0; i < notas.length; i++) {
-                System.out.println("Ingrese las cuatro notasa");
-                notas[i] = entrada.nextInt();
-                obtenerPromedioCualitativo(notas)
+            for (int i = 0; i < n.length; i++) {
+                System.out.printf("Ingrese la nota %d:\n", i + 1);
+                n[i] = entrada.nextInt();
             }
-
+            promedio = obtenerPromedioCualitativo(n[0], n[1], n[2], n[3]);
+            System.out.printf("El promedio de las notas: "
+                    + "%.0f,%.0f,%.0f,%.0f es %s\n"
+                    ,n[0]
+                    ,n[1]
+                    ,n[2]
+                    ,n[3]
+                    ,promedio);
             System.out.println("Si quiere terminar el proceso digite 1");
             opcion1 = entrada.nextInt();
             if (opcion1 == 1) {
@@ -40,14 +47,28 @@ public class Problema3 {
         }
     }
 
-    public static String obtenerPromedioCualitativo() {
-        Scanner entrada = new Scanner(System.in);
-        double promedio;
-        double area;
-        System.out.println("Ingresar el lado del cuadrado");
-        lado = entrada.nextDouble();
-        area = lado * lado * lado * lado;
-        return promedio
+    public static String obtenerPromedioCualitativo(double n1
+            , double n2
+            , double n3
+            , double n4) {
+        double prom;
+        String promedio="";
+        prom = (n1 + n2 + n3 + n4)/4;
+        if (prom >= 0 & prom <= 5) {
+            promedio = "Regular";
+        } else {
+            if (prom > 5 & prom <= 8) {
+                promedio = "Bueno";
+            } else {
+                if (prom > 8 & prom <= 9) {
+                    promedio = "Muy Bueno";
+                } else {
+                    if (prom > 8 & prom <= 9) {
+                        promedio = "Sobresaliente";
+                    }
+                }
+            }
+        }
+        return promedio;
     }
-
 }
